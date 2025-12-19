@@ -75,7 +75,7 @@
                     <li class="nav-item"><a class="nav-link link text-primary display-4" href="index.html#header3-1n">Benefits</a>
                     </li></ul>
                 
-                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-warning display-7" href="#order" target="_blank"><span class="mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>Order Now</a></div>
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-warning display-7" href="#order"><span class="mobi-mbri mobi-mbri-cart-full mbr-iconfont mbr-iconfont-btn"></span>Order Now</a></div>
             </div>
         </div>
     </nav>
@@ -102,7 +102,7 @@
 </strong></div></h1>
                         <p class="mbr-text mbr-fonts-style display-7"><br>GlucoSense is a natural dietary supplement thoughtfully formulated to support healthy blood sugar levels and promote overall metabolic health. It combines a powerful blend of herbal extracts, essential nutrients, and antioxidants that work together to help your body manage glucose more efficiently and maintain stable energy throughout the day.<br><br>Manufactured in the USA in an FDA-registered and GMP-certified facility, GlucoSense is made with high-quality, non-GMO ingredients to ensure purity, safety, and effectiveness. Whether you’re looking to improve your energy, reduce sugar cravings, or take a proactive step toward better health, GlucoSense provides a natural, reliable solution for supporting metabolic balance.<br></p>
                         
-                        <div class="mbr-section-btn pt-3"><a href="#order" class="btn btn-warning display-4" target="_blank"><span class="mbrib-shopping-cart mbr-iconfont mbr-iconfont-btn"></span>GET A DISCOUNT NOW!</a></div>
+                        <div class="mbr-section-btn pt-3"><a href="#order" class="btn btn-warning display-4"><span class="mbrib-shopping-cart mbr-iconfont mbr-iconfont-btn"></span>GET A DISCOUNT NOW!</a></div>
                     </div>
                 </div>
             </div>
@@ -452,8 +452,10 @@
 </section>
 
 <section data-bs-version="5.1" class="content4 cid-tB1yuhcVVi" id="content4-g">
-    
-<div id="order" class="container">
+
+<div id="order"></div>
+  
+<div class="container">
     <div class="row justify-content-center">
         <div class="title col-md-12 col-lg-10">
             <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2">
@@ -464,8 +466,7 @@
             </h4>
         </div>
     </div>
-</div>
-    
+</div>    
     
 </section>
 
@@ -1121,7 +1122,7 @@
                             <span class="currentcost mbr-fonts-style pr-2 display-2">Regular price :</span>
                             <span class="oldcost mbr-fonts-style display-2">$158<br><br></span>
                         </div>
-                        <div class="mbr-section-btn pt-3"><a href="#order" class="btn btn-warning display-4" target="_blank"><span class="mobi-mbri mobi-mbri-shopping-cart mbr-iconfont mbr-iconfont-btn"></span>Only For $49/Bottle</a></div>
+                        <div class="mbr-section-btn pt-3"><a href="#order" class="btn btn-warning display-4"><span class="mobi-mbri mobi-mbri-shopping-cart mbr-iconfont mbr-iconfont-btn"></span>Only For $49/Bottle</a></div>
                     </div>
                 </div>
             </div>
@@ -1198,7 +1199,7 @@ Remarks:
                 <h2 class="mbr-section-title mbr-fonts-style mb-3 display-7"><strong>Regular Price: $158/per bottle</strong></h2>
                 <p class="mbr-text mbr-fonts-style display-2"><strong>
                     Only for: $49/per bottle</strong></p>
-                <div class="mbr-section-btn mt-3"><a class="btn btn-warning display-5" href="#order" target="_blank"><span class="mobi-mbri mobi-mbri-cart-add mbr-iconfont mbr-iconfont-btn"></span>Order Your GlucoSense With Discount Now!</a></div>
+                <div class="mbr-section-btn mt-3"><a class="btn btn-warning display-5" href="#order"><span class="mobi-mbri mobi-mbri-cart-add mbr-iconfont mbr-iconfont-btn"></span>Order Your GlucoSense With Discount Now!</a></div>
                 
             </div>
         </div>
@@ -1262,5 +1263,41 @@ Remarks:
     </p>
 
 </footer>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+#order {
+  position: relative;
+  top: -90px;
+  height: 1px;
+}
+</style>
+
   
+<script>
+/* Force in-page hash links to scroll in the same tab, even if some script/template sets target=_blank */
+document.addEventListener('click', function(e) {
+  var a = e.target && e.target.closest ? e.target.closest('a') : null;
+  if (!a) return;
+  var href = a.getAttribute('href');
+  if (!href || href.charAt(0) !== '#') return;
+
+  // Prevent opening new tab / default navigation
+  e.preventDefault();
+
+  var id = href.slice(1);
+  var el = document.getElementById(id);
+  if (el && el.scrollIntoView) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else {
+    // Fallback
+    window.location.hash = href;
+  }
+  try { history.replaceState(null, '', href); } catch (err) {}
+}, true);
+</script>
+
 </body></html>
